@@ -1,3 +1,10 @@
-echo "agfaegaeg"
+echo "Running ESLint...srghsrh"
+npx eslint test.js
 
-exit 1
+if [ $? -ne 0 ]; then
+  echo "Lint errors found. Commit aborted."
+  exit 1
+fi
+
+echo "Lint passed. Proceeding with commit."
+exit 0
